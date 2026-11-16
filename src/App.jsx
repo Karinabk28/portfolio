@@ -118,7 +118,7 @@ function App() {
         </div>
       </section>
 
-      {/* ABOUT: SOBRE MÍ + SKILLS */}
+      {/* ABOUT: SOBRE MÍ */}
       <section id="about" className="about">
         <div className="about-intro">
           <div className="about-heading">
@@ -156,7 +156,6 @@ function App() {
       </section>
 
       {/* PROJECTS */}
-      {/* PROJECTS */}
       <section id="projects" className="projects">
 
         <div className="projects-intro">
@@ -173,14 +172,9 @@ function App() {
         </div>
 
         <div className="projects-grid">
-
           <article className="project-card">
-
             <div className="project-logo">
-              <img
-                src="/images/logo.png"
-                alt="BookControl logo"
-              />
+              <img src={`${import.meta.env.BASE_URL}images/logo.png`} alt="BookControl logo"/>
             </div>
 
             <div className="project-info">
@@ -191,48 +185,39 @@ function App() {
                 href="https://github.com/Karinabk28/BookControl"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="project-github"
-              >
+                className="project-github">
                 {t.githubLink} ↗
               </a>
             </div>
-
           </article>
-
         </div>
 
       </section>
+
       {/* CONTACT */}
+      <section id="contact" className="contact">
+        <div className="contact-heading">
+          <h2>{t.contact}</h2>
+          <div className="contact-decoration"></div>
+        </div>
 
-<section id="contact" className="contact">
+        <div className="contact-links">
 
-    <div className="contact-heading">
-        <h2>{t.contact}</h2>
-        <div className="contact-decoration"></div>
-    </div>
-
-    <div className="contact-links">
-
-        <a href="mailto:Karinabaibakk@gmail.com" className="contact-card">
-            <img src="/images/gmail.png" alt="Gmail" />
+          <a href="mailto:Karinabaibakk@gmail.com" className="contact-card">
+            <img src={`${import.meta.env.BASE_URL}images/gmail.png`} alt="Gmail" />
             <span>Gmail</span>
-        </a>
+          </a>
 
-        <a
-            href="
-https://www.linkedin.com/in/karinabaibak"
+          <a
+            href="https://www.linkedin.com/in/karinabaibak"
             target="_blank"
             rel="noopener noreferrer"
             className="contact-card">
-            <img src="/images/linkedin.png" alt="LinkedIn" />
+            <img src={`${import.meta.env.BASE_URL}images/linkedin.png`} alt="LinkedIn" />
             <span>LinkedIn</span>
-        </a>
-
-    </div>
-
-</section>
-
-
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
